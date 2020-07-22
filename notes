@@ -31,3 +31,7 @@ Creating the template for  home page(index.html)
 importing the render_template funtion
 use jinja template exp for making code blocks 
 Using the include directive to include external files
+-----------------------------------------------------------
+GET
+request.args.get(<field_name>)
+request.args[<field_name>]

@@ -1,0 +1,28 @@
+
+    {% extends "layout.html" %}
+   
+    {% block content %}
+    <h2>Want to Mentor ? Register With Us</h2>
+
+    <div class="container">
+        <form name="register" action="register.php" method="get">
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <br>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <br>
+            <label for="Tech"><b>Technical Skills</b></label>
+            <input type="text" placeholder="Enter your skills " name="skills" required>
+            <br>
+            <label for="Github"><b>Github Url</b></label>
+            <input type="text" placeholder="Enter url" name="Github Url">
+            <br>
+            <label for="Linkdln"><b>Linkdln</b></label>
+            <input type="text" placeholder="Enter Linkdln url" name="Linkdln">
+            <br>
+            <br class="clear">
+            <input class="btn-submitt" type="submit" name="submit" >
+        </form>
+    </div>
+    {% endblock %}
