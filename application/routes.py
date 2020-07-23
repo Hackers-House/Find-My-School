@@ -1,6 +1,7 @@
-from flask import render_template,redirect,request,make_response
+from flask import render_template,redirect,request,make_response,flash,url_for
 from application import app
-from .UserDAC import GetConnection,GetTable
+from .UserDAC import *
+from application.forms import RegisterForm
 #create sime route
 @app.route('/')
 def redir():
@@ -18,9 +19,21 @@ def blog():
 def events():
     return render_template('events.html',events=True)
 
-@app.route("/register")
+@app.route("/register",methods=['POST','GET'])
 def register():
-    return render_template('register.html',register=True)
+    form = RegisterForm()
+    if form.validate_on_submit():
+        userID     = GetIndex()
+        userID    += 1
+        username    =form.username.data
+        email       = form.email.data
+        Github      =form.Github.data
+        linkdln     =form.linkdln.data
+        Tech        =form.Tech.data 
+        SetData(userID,username,email,Github,linkdln,Tech)   
+        flash("You are successfully registered!","success")
+        return redirect(url_for('index'))
+    return render_template("register.html", title="Want to Mentor ? Register With Us", form=form,register=True)
 
 #@app.route("/user")
 #def user():

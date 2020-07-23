@@ -42,8 +42,8 @@ hr {
 }
 
 input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
+    width: 50%;
+    padding: 7px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
@@ -97,7 +97,7 @@ footer {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
     opacity: 0.9;
 }
 .btn-submitt {
@@ -107,7 +107,7 @@ footer {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
     opacity: 0.9;
 }
 .btn-submit:hover {
@@ -116,4 +116,7 @@ footer {
 .youtube{
     height: 300px;
     width: 30%;
+}
+.error-message{
+    color: red;
 }
