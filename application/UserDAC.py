@@ -1,7 +1,7 @@
 import pyodbc
 from config import Config
 def GetConnection():
-        cxn=pyodbc.connect(driver=Config.Driver,server=Config.Server,PORT=1433, user=Config.User, password=Config.Password, database=Config.Database,TDS_VERSION=7.2)
+        cxn=pyodbc.connect(driver=Config.Driver,server=Config.Server,PORT=1433, user=Config.User, password=Config.Password, database=Config.Database)
         return cxn
 def GetIndex():
     con=GetConnection()
