@@ -1,1 +1,1 @@
-web: gunicorn application.appp --log-file -
+web: gunicorn application:appp --log-file -
