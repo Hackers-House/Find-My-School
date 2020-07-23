@@ -30,7 +30,7 @@ def register():
         Github      =form.Github.data
         linkdln     =form.linkdln.data
         Tech        =form.Tech.data 
-        SetData(userID,username,email,Github,linkdln,Tech)   
+        #SetData(userID,username,email,Github,linkdln,Tech)   
         flash("You are successfully registered!","success")
         return redirect(url_for('index'))
     return render_template("register.html", title="Want to Mentor ? Register With Us", form=form,register=True)

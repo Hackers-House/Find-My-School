@@ -1,6 +1,7 @@
 import pyodbc
+from config import Config
 def GetConnection():
-        cxn=pyodbc.connect(driver='ODBC Driver 17 for SQL Server',server='Anush', user='sa', password='Bu1ssnessman', database='LCH')
+        cxn=pyodbc.connect(driver=Config.Driver,server=Config.Server, user=Config.User, password=Config.Password, database=Config.Database)
         return cxn
 def GetIndex():
     con=GetConnection()
