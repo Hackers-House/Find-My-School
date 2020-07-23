@@ -1,25 +1,25 @@
 from flask import render_template,redirect,request,make_response,flash,url_for
-from application import app
+from application import appp
 from .UserDAC import *
 from application.forms import RegisterForm
 #create sime route
-@app.route('/')
+@appp.route('/')
 def redir():
     return redirect('/index')
-@app.route("/index")
-@app.route("/home")
+@appp.route("/index")
+@appp.route("/home")
 def index():
     return render_template('index.html',index=True)
 
-@app.route("/blog")
+@appp.route("/blog")
 def blog():
     return render_template('blog.html',blog=True)
 
-@app.route("/events")
+@appp.route("/events")
 def events():
     return render_template('events.html',events=True)
 
-@app.route("/register",methods=['POST','GET'])
+@appp.route("/register",methods=['POST','GET'])
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
@@ -35,12 +35,12 @@ def register():
         return redirect(url_for('index'))
     return render_template("register.html", title="Want to Mentor ? Register With Us", form=form,register=True)
 
-#@app.route("/user")
+#@appp.route("/user")
 #def user():
 #    User(UserId=1,username="anush",email="anush.venkatakrishna@gmail.com",Github_Url="",linkdln_Url="",Technologies="python ,c").save()
  #   User(UserId=2,username="anushk",email="anush@gmail.com",Github_Url="xc",linkdln_Url="xx",Technologies="python ,c").save()
     
-@app.route('/test')
+@appp.route('/test')
 def test():
     data=GetTable()
     data=data[0][2]
