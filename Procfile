@@ -1,1 +1,1 @@
-web: gunicorn application:appp --log-file -
+web: gunicorn --bind 0.0.0.0:${PORT} application:appp

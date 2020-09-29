@@ -14,6 +14,9 @@ def index():
 @appp.route("/blog")
 def blog():
     return render_template('blog.html',blog=True)
+@appp.route("/bot")
+def bot():
+    return render_template('bot.html',bot=True)
 
 @appp.route("/events")
 def events():

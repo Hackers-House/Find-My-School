@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+<div class="row"></div>
+    <div class="col-md-12 text-center"> 
+        <h1>Welcome to Learn Code Hack.</h1>
+
+        {% if login %}
+        <h3>Let's get started.</h3>
+        {% else %}
+        <p>Want to visit our blogs? <a href="{{ url_for('blog') }}">Blog</a></p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
