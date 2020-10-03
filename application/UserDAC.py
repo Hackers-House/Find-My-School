@@ -1,4 +1,10 @@
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
-db = SQLAlchemy()
+from flask_migrate import Migrate
+from application import appp
+
+db = SQLAlchemy(appp)
+
+migrate = Migrate(app = appp, db = db)
+
 
