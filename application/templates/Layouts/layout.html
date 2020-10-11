@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,7 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='assets/img/favicon.ico')}}">
 
     <!-- CSS here -->
-    <link rel="stylesheet" type= "text/css" href="{{url_for('static',filename='assets/css/check.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='assets/css/check.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='assets/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='assets/css/slicknav.css')}}">
@@ -25,16 +26,14 @@
     <link rel="stylesheet" href="{{url_for('static',filename='assets/css/slick.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='assets/css/nice-select.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='assets/css/style.css')}}">
-    {% block loginpg %}    {% endblock loginpg %}
-    {% block profile %}    {% endblock profile %}
+    {% block loginpg %} {% endblock loginpg %}
+    {% block profile %} {% endblock profile %}
 
-    
+
 </head>
 
 <body>
     {% include "Layouts/nav.html" %}
-
-
     <!-- ? Preloader Start 
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -45,8 +44,7 @@
                 </div>
             </div>
         </div>
-    </div>
--->
+    </div> -->
     <!-- Preloader Start -->
 
     {% block content %}
@@ -54,7 +52,7 @@
     {% with messages = get_flashed_messages() %}
     {% if messages %}
     <ul>
-        
+
         {% for message in messages %}
         <li>{{ message }}</li>
         {% endfor %}
