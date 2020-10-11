@@ -1,1 +1,1 @@
-# LCH-webapp
+# Find My School
