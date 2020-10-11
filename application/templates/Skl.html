@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cee19403f3244e949ab5e9fc9318566c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_cee19403f3244e949ab5e9fc9318566c" ></div>
+        
+</body>
+<script>    
+    
+            var map_cee19403f3244e949ab5e9fc9318566c = L.map(
+                "map_cee19403f3244e949ab5e9fc9318566c",
+                {
+                    center: [13.025, 80.2575],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 30,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_69f0ab11009e4f98903f236102c75d6c = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+            var marker_f346a4441f1b4456a24f1e050a2ee8dd = L.marker(
+                [13.025, 80.2575],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+            var icon_e33562c930f340f0a0702f0f8166945a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f346a4441f1b4456a24f1e050a2ee8dd.setIcon(icon_e33562c930f340f0a0702f0f8166945a);
+        
+    
+        var popup_342eaa0f320a4c5c9850485ebf5f6bab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e962507537ab436b9dcac0026ae959cd = $(`<div id="html_e962507537ab436b9dcac0026ae959cd" style="width: 100.0%; height: 100.0%;">You</div>`)[0];
+            popup_342eaa0f320a4c5c9850485ebf5f6bab.setContent(html_e962507537ab436b9dcac0026ae959cd);
+        
+
+        marker_f346a4441f1b4456a24f1e050a2ee8dd.bindPopup(popup_342eaa0f320a4c5c9850485ebf5f6bab)
+        ;
+
+        
+    
+    
+            var marker_61a1947e170848d680cc7f1b5c965440 = L.marker(
+                [13.0328517, 80.2589261],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_d4e9a882e62b4926b99fc97b0523950f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0a693a45c5341b9a8de3a3e26d01328 = $(`<div id="html_d0a693a45c5341b9a8de3a3e26d01328" style="width: 100.0%; height: 100.0%;">MINDSCREEN FILM INSTITUTE (MFi)</div>`)[0];
+            popup_d4e9a882e62b4926b99fc97b0523950f.setContent(html_d0a693a45c5341b9a8de3a3e26d01328);
+        
+
+        marker_61a1947e170848d680cc7f1b5c965440.bindPopup(popup_d4e9a882e62b4926b99fc97b0523950f)
+        ;
+
+        
+    
+    
+            var marker_ea2d04bc111f4b19bd12b8f5bbf35677 = L.marker(
+                [13.0099175, 80.2507416],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_02e8ae90481140e29165bc0575a54429 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f53b18cf3e274c43b36f040f3210bd41 = $(`<div id="html_f53b18cf3e274c43b36f040f3210bd41" style="width: 100.0%; height: 100.0%;">Bala Vidya Mandir Senior Secondary School</div>`)[0];
+            popup_02e8ae90481140e29165bc0575a54429.setContent(html_f53b18cf3e274c43b36f040f3210bd41);
+        
+
+        marker_ea2d04bc111f4b19bd12b8f5bbf35677.bindPopup(popup_02e8ae90481140e29165bc0575a54429)
+        ;
+
+        
+    
+    
+            var marker_c175f8013b06465881714508097afc89 = L.marker(
+                [13.0309745, 80.2515595],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_93e02e3895884b61b998bc721201d6b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec4d6dad3924459189c91a56119b2e7b = $(`<div id="html_ec4d6dad3924459189c91a56119b2e7b" style="width: 100.0%; height: 100.0%;">136.1 Yoga and Wellness Academy</div>`)[0];
+            popup_93e02e3895884b61b998bc721201d6b1.setContent(html_ec4d6dad3924459189c91a56119b2e7b);
+        
+
+        marker_c175f8013b06465881714508097afc89.bindPopup(popup_93e02e3895884b61b998bc721201d6b1)
+        ;
+
+        
+    
+    
+            var marker_16889e0b829045dea1214f88679c034f = L.marker(
+                [13.0191572, 80.2417679],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_a55672798b574b9d8cc8690bbad5f694 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13b69a4a16ed4f228ce3fca983f3d369 = $(`<div id="html_13b69a4a16ed4f228ce3fca983f3d369" style="width: 100.0%; height: 100.0%;">A.M.M. Matriculation Higher Secondary School</div>`)[0];
+            popup_a55672798b574b9d8cc8690bbad5f694.setContent(html_13b69a4a16ed4f228ce3fca983f3d369);
+        
+
+        marker_16889e0b829045dea1214f88679c034f.bindPopup(popup_a55672798b574b9d8cc8690bbad5f694)
+        ;
+
+        
+    
+    
+            var marker_5b5f1e4aa1cb415a9bf918a3aa1f583a = L.marker(
+                [13.0336433, 80.25051789999999],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_1b87fb789c094ef3804ebaede46f0dd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf88b4d1c3b84f16ac7a2f68d3a94fea = $(`<div id="html_cf88b4d1c3b84f16ac7a2f68d3a94fea" style="width: 100.0%; height: 100.0%;">Workout with Kamlesh - Aerobics Classes in Chennai</div>`)[0];
+            popup_1b87fb789c094ef3804ebaede46f0dd4.setContent(html_cf88b4d1c3b84f16ac7a2f68d3a94fea);
+        
+
+        marker_5b5f1e4aa1cb415a9bf918a3aa1f583a.bindPopup(popup_1b87fb789c094ef3804ebaede46f0dd4)
+        ;
+
+        
+    
+    
+            var marker_777dd1b06c86411799ba5a7a61f3f918 = L.marker(
+                [13.0213301, 80.25780809999999],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_c5300d903fd34833a571ab3c937591e6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_912be2de594f49cf969d246124ae17d2 = $(`<div id="html_912be2de594f49cf969d246124ae17d2" style="width: 100.0%; height: 100.0%;">Weebees</div>`)[0];
+            popup_c5300d903fd34833a571ab3c937591e6.setContent(html_912be2de594f49cf969d246124ae17d2);
+        
+
+        marker_777dd1b06c86411799ba5a7a61f3f918.bindPopup(popup_c5300d903fd34833a571ab3c937591e6)
+        ;
+
+        
+    
+    
+            var marker_20c5dc31e66c467a9f3b5f1259f7f63a = L.marker(
+                [13.033073, 80.25721899999999],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_fb87679738af4a6983872c6510e5ee9c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_487143e4a8364c98a4d7c524217a9c5d = $(`<div id="html_487143e4a8364c98a4d7c524217a9c5d" style="width: 100.0%; height: 100.0%;">The Music School</div>`)[0];
+            popup_fb87679738af4a6983872c6510e5ee9c.setContent(html_487143e4a8364c98a4d7c524217a9c5d);
+        
+
+        marker_20c5dc31e66c467a9f3b5f1259f7f63a.bindPopup(popup_fb87679738af4a6983872c6510e5ee9c)
+        ;
+
+        
+    
+    
+            var marker_9b98d3633aff42cf8ff95c02441decf4 = L.marker(
+                [13.0339164, 80.2547427],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_a8d50930e7474d8d9ee6a4f6f54ec84d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eda920677c464fd08019c31920d2557b = $(`<div id="html_eda920677c464fd08019c31920d2557b" style="width: 100.0%; height: 100.0%;">Oyster Montessori</div>`)[0];
+            popup_a8d50930e7474d8d9ee6a4f6f54ec84d.setContent(html_eda920677c464fd08019c31920d2557b);
+        
+
+        marker_9b98d3633aff42cf8ff95c02441decf4.bindPopup(popup_a8d50930e7474d8d9ee6a4f6f54ec84d)
+        ;
+
+        
+    
+    
+            var marker_c62ae84e662f49818888d39859005a3b = L.marker(
+                [13.0312772, 80.26733329999999],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_1d9d15a88e2f4a9c874837ae820953c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c84833a9e47046539a90e5365b73942d = $(`<div id="html_c84833a9e47046539a90e5365b73942d" style="width: 100.0%; height: 100.0%;">Sri Ramakrishna Math Chennai</div>`)[0];
+            popup_1d9d15a88e2f4a9c874837ae820953c2.setContent(html_c84833a9e47046539a90e5365b73942d);
+        
+
+        marker_c62ae84e662f49818888d39859005a3b.bindPopup(popup_1d9d15a88e2f4a9c874837ae820953c2)
+        ;
+
+        
+    
+    
+            var marker_65f0c343ff2a4cebb07431d5cdae7a19 = L.marker(
+                [13.0292344, 80.2546745],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_5cdf85ff9d3e42459c717e91e0cd165a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e74ad67a14584792839b08eb637e8943 = $(`<div id="html_e74ad67a14584792839b08eb637e8943" style="width: 100.0%; height: 100.0%;">Fasttrack Kids</div>`)[0];
+            popup_5cdf85ff9d3e42459c717e91e0cd165a.setContent(html_e74ad67a14584792839b08eb637e8943);
+        
+
+        marker_65f0c343ff2a4cebb07431d5cdae7a19.bindPopup(popup_5cdf85ff9d3e42459c717e91e0cd165a)
+        ;
+
+        
+    
+    
+            var marker_e901aa5a57be48c6a34d0261b59bb2d1 = L.marker(
+                [13.0381375, 80.25630249999999],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_4f095c24d76a43729061063d01f9e776 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_792aa5c8abca4ce0b7139522fde29442 = $(`<div id="html_792aa5c8abca4ce0b7139522fde29442" style="width: 100.0%; height: 100.0%;">SARASWATHI KENDRA LEARNING CENTRE FOR CHILDREN</div>`)[0];
+            popup_4f095c24d76a43729061063d01f9e776.setContent(html_792aa5c8abca4ce0b7139522fde29442);
+        
+
+        marker_e901aa5a57be48c6a34d0261b59bb2d1.bindPopup(popup_4f095c24d76a43729061063d01f9e776)
+        ;
+
+        
+    
+    
+            var marker_d4d9ff45fc8c469ebe63ec5abebb8cd9 = L.marker(
+                [13.0287967, 80.26312399999999],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_da60b2a02ca34770958b226708f32ef5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4537e260c5b4b24b545c6864e344510 = $(`<div id="html_f4537e260c5b4b24b545c6864e344510" style="width: 100.0%; height: 100.0%;">Vidya Niketan Association</div>`)[0];
+            popup_da60b2a02ca34770958b226708f32ef5.setContent(html_f4537e260c5b4b24b545c6864e344510);
+        
+
+        marker_d4d9ff45fc8c469ebe63ec5abebb8cd9.bindPopup(popup_da60b2a02ca34770958b226708f32ef5)
+        ;
+
+        
+    
+    
+            var marker_04e4de22750f498aae1ce1f7c70c9e34 = L.marker(
+                [13.036311, 80.2622408],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_c790d9a361474a3da7a2b1c38d354487 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52115b193ec546418c978d53ef8200e1 = $(`<div id="html_52115b193ec546418c978d53ef8200e1" style="width: 100.0%; height: 100.0%;">Sprouts Montessori House of Children</div>`)[0];
+            popup_c790d9a361474a3da7a2b1c38d354487.setContent(html_52115b193ec546418c978d53ef8200e1);
+        
+
+        marker_04e4de22750f498aae1ce1f7c70c9e34.bindPopup(popup_c790d9a361474a3da7a2b1c38d354487)
+        ;
+
+        
+    
+    
+            var marker_74feb3ca55a74e0aa855ccbb043a9bc9 = L.marker(
+                [13.0291298, 80.2544523],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_3fb8c10a6bf1433cb10b894709edeb03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34a0f736b1fc4ebb9f24bd5ee20af4b4 = $(`<div id="html_34a0f736b1fc4ebb9f24bd5ee20af4b4" style="width: 100.0%; height: 100.0%;">Alphabets</div>`)[0];
+            popup_3fb8c10a6bf1433cb10b894709edeb03.setContent(html_34a0f736b1fc4ebb9f24bd5ee20af4b4);
+        
+
+        marker_74feb3ca55a74e0aa855ccbb043a9bc9.bindPopup(popup_3fb8c10a6bf1433cb10b894709edeb03)
+        ;
+
+        
+    
+    
+            var marker_d45b0a1d67364876a34563f8f60e694d = L.marker(
+                [13.0171332, 80.2598476],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_19ab057a91eb41609e65b9532598f0d1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4105d3ce9b674b54b035b1da72fe38ea = $(`<div id="html_4105d3ce9b674b54b035b1da72fe38ea" style="width: 100.0%; height: 100.0%;">I P D Orthopaedic Centre</div>`)[0];
+            popup_19ab057a91eb41609e65b9532598f0d1.setContent(html_4105d3ce9b674b54b035b1da72fe38ea);
+        
+
+        marker_d45b0a1d67364876a34563f8f60e694d.bindPopup(popup_19ab057a91eb41609e65b9532598f0d1)
+        ;
+
+        
+    
+    
+            var marker_b60caf2504cc4ebb916f39f262d4fb82 = L.marker(
+                [13.0279242, 80.2582863],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_48daf8daf05d4bd9a888c17a5acc3bd9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b47f7633e0214e08833b40745af7d25c = $(`<div id="html_b47f7633e0214e08833b40745af7d25c" style="width: 100.0%; height: 100.0%;">Corporation High School</div>`)[0];
+            popup_48daf8daf05d4bd9a888c17a5acc3bd9.setContent(html_b47f7633e0214e08833b40745af7d25c);
+        
+
+        marker_b60caf2504cc4ebb916f39f262d4fb82.bindPopup(popup_48daf8daf05d4bd9a888c17a5acc3bd9)
+        ;
+
+        
+    
+    
+            var marker_505cdd790f7947ef92213e819ecd49b9 = L.marker(
+                [13.0266643, 80.26076499999999],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_efeed4c20bc742f08708c01de606e98a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d0a0437b0654379bc51065854d0c8a4 = $(`<div id="html_7d0a0437b0654379bc51065854d0c8a4" style="width: 100.0%; height: 100.0%;">Bamboola Tennis Class</div>`)[0];
+            popup_efeed4c20bc742f08708c01de606e98a.setContent(html_7d0a0437b0654379bc51065854d0c8a4);
+        
+
+        marker_505cdd790f7947ef92213e819ecd49b9.bindPopup(popup_efeed4c20bc742f08708c01de606e98a)
+        ;
+
+        
+    
+    
+            var marker_b9a2c53878b74b9f99ab8289ea6410e0 = L.marker(
+                [13.0213131, 80.2578408],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_88e330ddc1ab4c0ab47429fa6d421cf4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e63f9b3429ee4115bbd7e0486ba5ffc2 = $(`<div id="html_e63f9b3429ee4115bbd7e0486ba5ffc2" style="width: 100.0%; height: 100.0%;">Weebee</div>`)[0];
+            popup_88e330ddc1ab4c0ab47429fa6d421cf4.setContent(html_e63f9b3429ee4115bbd7e0486ba5ffc2);
+        
+
+        marker_b9a2c53878b74b9f99ab8289ea6410e0.bindPopup(popup_88e330ddc1ab4c0ab47429fa6d421cf4)
+        ;
+
+        
+    
+    
+            var marker_2bbbf4312d2c4e028147c9a6a1ab634f = L.marker(
+                [13.029065, 80.258557],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_ba83aec93f3a43d1abf678498102a7ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a24b0475b4c4056a826e1f66d6074aa = $(`<div id="html_8a24b0475b4c4056a826e1f66d6074aa" style="width: 100.0%; height: 100.0%;">Pink Fitness - Ladies Gym RA puram</div>`)[0];
+            popup_ba83aec93f3a43d1abf678498102a7ab.setContent(html_8a24b0475b4c4056a826e1f66d6074aa);
+        
+
+        marker_2bbbf4312d2c4e028147c9a6a1ab634f.bindPopup(popup_ba83aec93f3a43d1abf678498102a7ab)
+        ;
+
+        
+    
+    
+            var marker_ba5c003dac254dfba18536b08bb7a941 = L.marker(
+                [13.0294237, 80.25674339999999],
+                {}
+            ).addTo(map_cee19403f3244e949ab5e9fc9318566c);
+        
+    
+        var popup_d49f08dde59140e187e3746de93dec65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dbed415b7b384edc8d6914a6e447a8b4 = $(`<div id="html_dbed415b7b384edc8d6914a6e447a8b4" style="width: 100.0%; height: 100.0%;">M.S.M. Dance School</div>`)[0];
+            popup_d49f08dde59140e187e3746de93dec65.setContent(html_dbed415b7b384edc8d6914a6e447a8b4);
+        
+
+        marker_ba5c003dac254dfba18536b08bb7a941.bindPopup(popup_d49f08dde59140e187e3746de93dec65)
+        ;
+
+        
+    
+</script>

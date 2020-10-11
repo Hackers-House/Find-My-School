@@ -7,6 +7,11 @@ from .forms import LoginForm, RegistrationForm, EditProfileForm
 from werkzeug.urls import url_parse
 
 
+@appp.route("/contact")
+@login_required
+def contact():
+    return render_template('contact.html', blog=True)
+
 @appp.route('/')
 def redir():
     return redirect('/index')
@@ -18,16 +23,25 @@ def index():
     return render_template('index.html', index=True)
 
 
+@appp.route("/near")
+@login_required
+def school_near_me():
+    return render_template('snme.html', blog=True)
+
+
 @appp.route("/about")
 @login_required
 def about_us():
     return render_template('about.html', blog=True)
 
-
-@appp.route("/near")
+@appp.route("/schools")
 @login_required
-def school_near_me():
-    return render_template('snme.html', blog=True)
+def apply():
+    return render_template('products.html', blog=True)
+
+
+
+
 
 
 @appp.route('/login', methods=['GET', 'POST'])
@@ -54,9 +68,9 @@ def logout():
     return redirect(url_for('index'))
 
 
-@appp.route("/events")
-def events():
-    return render_template('events.html', events=True)
+@appp.route("/skl")
+def skl():
+    return render_template('Skl.html')
 
 
 @appp.route('/register', methods=['GET', 'POST'])
@@ -79,4 +93,6 @@ def register():
 def user(username):
     form = EditProfileForm()
     user = User.query.filter_by(username=username).first_or_404()
+    if username[-3:] == 'edu':
+        return render_template('school.html, user=user')
     return render_template('user.html', user=user, form=form)

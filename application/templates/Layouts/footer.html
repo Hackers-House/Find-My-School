@@ -1,4 +1,5 @@
 <footer>
+    
     <div style="padding: 30px; text-align: center; color: aliceblue; font-size: 1.5rem;font-weight: 500;"
         class="footer-wrappper footer-bg">
         <footer class="container-sm text-center site-footer py-5">
@@ -18,7 +19,29 @@
 <div id="back-top">
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+
+<!-- Additional Scripts -->
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/isotope.js"></script>
+<script src="assets/js/accordions.js"></script>
+
+
+<script language = "text/Javascript"> 
+  cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+  function clearField(t){                   //declaring the array outside of the
+  if(! cleared[t.id]){                      // function makes it static and global
+      cleared[t.id] = 1;  // you could use true and false, but that's more typing
+      t.value='';         // with more chance of typos
+      t.style.color='#fff';
+      }
+  }
+</script>
 <!-- JS here -->
 <script src="../static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
 <!-- Jquery, Popper, Bootstrap -->

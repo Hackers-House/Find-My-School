@@ -1,6 +1,167 @@
 {% extends "Layouts/layout.html" %}
 {% block content %}
 <main>
+    <!-- Page Content -->
+    <div class="page-heading contact-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>contact us</h4>
+              <h2>let’s get in touch</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="find-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Our Location on Maps</h2>
+            </div>
+          </div>
+          <div class="col-md-8">
+<!-- How to change your own map point
+	1. Go to Google Maps
+	2. Click on your location point
+	3. Click "Share" and choose "Embed map" tab
+	4. Copy only URL and paste it within the src="" field below
+-->
+            <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62613605.49403502!2d44.18018534715397!3d16.69532895684013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1602402916344!5m2!1sen!2sin" width="100%" height="330px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="left-content">
+              <h4>About us</h4>
+              <p>The commercial viability of this application all the parents and the students in fact are in dire need of a universal app which facilitates them to have access to the nearby and at the far end of college and university at a global extent.</p>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-medium"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     
-</main>
-{% endblock %}
+    <div class="send-message">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Send us a Message</h2>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="contact-form">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <ul class="accordion">
+              <li>
+                  <a>Aim of this project?</a>
+                  <div class="content">
+                      <p>This project is aimed at making the admission process hassle free and seamless which saves a lot of botheration and uncententy while giving you the assurance and acknowledgement instantly.</p>
+                  </div>
+              </li>
+              <li>
+                  <a>What's the plan</a>
+                  <div class="content">
+                      <p>Colleges and Schools and register with us and conduct the admission process virtually and all at one place.</p>
+                  </div>
+              </li>
+              <li>
+                  <a>How it is done?</a>
+                  <div class="content">
+                      <p> We are making a Flask web application, we are using collaborative filtering to recommend the best school. We have an FAQ bot which guides the Applicants on the various processes. The college will be able to customize the bot where they can add Q and A.</p>
+                  </div>
+              </li>
+              <li>
+                  <a>Our motivation!</a>
+                  <div class="content">
+                      <p>We all remember standing in those long lines for 3 hrs just to get the application form and waiting for 4 hrs or more to get the admission into a top tier college. We wanted to take this entire process virtually. From recommending the best college based on his interest and marks to providing an easy and safer way of managing student documents to a hassle-free way of applying to a college.</p>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="happy-clients">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Our Happy Customers</h2>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-clients owl-carousel">
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="1">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="2">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="3">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="4">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="5">
+              </div>
+              
+              <div class="client-item">
+                <img src="assets/images/client-01.png" alt="6">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  {% endblock %}
