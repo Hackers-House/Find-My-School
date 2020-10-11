@@ -1,9 +1,7 @@
 {% extends "Layouts/layout.html" %}
 {% block content %}
-{{super()}}
-<link rel="stylesheet" type= "text/css" href="{{url_for('static',filename='assets/css/check.css')}}">
 
-
+<div class = "forrem">
     <main class="login-body" data-vide-bg="../static/assets/img/login-bg.mp4">
         <!-- Login Admin -->
         <form class="form-default" action="" method="POST" novalidate>
@@ -16,6 +14,10 @@
                 <h2>Login Here</h2>
                 {{ form.hidden_tag() }}
                 <div class="form-input">
+                    {{ form.username.label }}<br>
+                    {{ form.username(size=50) }}
+                </div>
+                <div class="form-input">
                     {{ form.email.label }}<br>
                     {{ form.email(size=50) }}
                 </div>
@@ -24,6 +26,7 @@
                     {{ form.password(size=32) }}
                     
                 </div>
+               
                 
                 <div class="containers">
                 {{ form.remember_me(class_ = "checkmarks", id = "checkmarks") }}
@@ -36,9 +39,15 @@
                 <!-- Forget Password -->
                 <a href="#" class="forget">Forget Password</a>
                 <!-- Forget Password -->
-                <a href="/register" class="registration">Registration</a>
+                <a href="{{ url_for('register') }}" class="registration">Registration</a>
             </div>
         </form>
         <!-- /end login form -->
     </main>
+    </div>
     {% endblock %}
+</div>
+{% block loginpg %} 
+<link rel="stylesheet" type= "text/css" href="{{url_for('static',filename='assets/css/check.css')}}">
+{% endblock loginpg %}
+

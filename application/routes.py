@@ -1,7 +1,10 @@
-from flask import render_template, redirect, flash, url_for
+from flask import render_template, redirect, flash, url_for, request
+from flask_login import current_user, login_user, logout_user, login_required
+from .model.models import User
 from application import appp
-
-from .forms import RegisterForm, LoginForm
+from .UserDAC import db
+from .forms import LoginForm, RegistrationForm, EditProfileForm
+from werkzeug.urls import url_parse
 
 
 @appp.route('/')
@@ -15,19 +18,40 @@ def index():
     return render_template('index.html', index=True)
 
 
-@appp.route("/blog")
-def blog():
-    return render_template('blog.html', blog=True)
+@appp.route("/about")
+@login_required
+def about_us():
+    return render_template('about.html', blog=True)
 
 
-@appp.route("/login")
+@appp.route("/near")
+@login_required
+def school_near_me():
+    return render_template('snme.html', blog=True)
+
+
+@appp.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
-        flash('Login requested for user {}, remember_me={}'.format(
-            form.email.data, form.remember_me.data))
-        return redirect('/')
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+        next_page = request.args.get('next')
+        if not next_page or url_parse(next_page).netloc != '':
+            next_page = url_for('index')
+        return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
+
+
+@appp.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
 
 @appp.route("/events")
@@ -35,38 +59,24 @@ def events():
     return render_template('events.html', events=True)
 
 
-@appp.route("/register",methods=['POST','GET'])
+@appp.route('/register', methods=['GET', 'POST'])
 def register():
-    form = RegisterForm()
-    if form.validate_on_submit():
-        userID = GetIndex()
-        userID += 1
-        username = form.username.data
-        email = form.email.data
-        Github = form.Github.data
-        linkdln = form.linkdln.data
-        Tech = form.Tech.data
-# SetData(userID,username,email,Github,linkdln,Tech)
-        flash("You are successfully registered!", "success")
+    if current_user.is_authenticated:
         return redirect(url_for('index'))
-    return render_template(
-        "register.html",
-        title="Want to Mentor ? Register with Us",
-        form=form, register=True)
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        user = User(username=form.username.data, email=form.email.data)
+        user.set_password(form.password.data)
+        db.session.add(user)
+        db.session.commit()
+        flash('Congratulations, you are now a registered user!')
+        return redirect(url_for('login'))
+    return render_template('register.html', title='Register', form=form)
 
 
-# @appp.route("/user")
-# def user():
-#    User(UserId=1,
-# username="anush",
-# email="anush.venkatakrishna@gmail.com",
-# Github_Url="",linkdln_Url="",Technologies="python ,c").save()
-#   User(UserId=2,username="anushk",email="anush@gmail.com",Github_Url="xc",
-#  linkdln_Url="xx",Technologies="python ,c").save()
-
-
-# @appp.route('/test')
-# def test():
-#     data = GetTable()
-#     data = data[0][2]
-#     return render_template('test.html', data=data)
+@appp.route('/user/<username>')
+@login_required
+def user(username):
+    form = EditProfileForm()
+    user = User.query.filter_by(username=username).first_or_404()
+    return render_template('user.html', user=user, form=form)
