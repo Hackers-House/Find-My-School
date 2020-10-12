@@ -49,5 +49,4 @@ def main():
     for loc, Hsname in zip(HospitalLoc, hosname):
         folium.Marker(location=loc, popup=Hsname).add_to(my_map2)
     my_map2.save("application/templates/Skl.html")
-if __name__ == "__main__":
-    print(GetUserGeoLocation())
+
