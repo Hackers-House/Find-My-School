@@ -66,8 +66,8 @@ def logout():
 
 @appp.route("/skl")
 def skl():
-    from .services.map import main
-    main()
+    #from .services.map import main
+    #main()
     return render_template('Skl.html')
 
 
