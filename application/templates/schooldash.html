@@ -1,0 +1,149 @@
+{% extends "Layouts/layout.html" %}
+{% block content %}
+<nav style="padding: 23px;" class="navbar navbar-expand-md navbar-primary bg-primary">
+  <a style="font-size: 2rem;font-weight: 500;" class="navbar-brand" href="#">Edit/Complete Profile</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+    aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+  </div>
+</nav>
+
+<div class="row">
+  <div class="col-md-8">
+    <div style="padding: 50px;margin-left: 30px;" class="card">
+      <div class="card-body">
+        <form action="" method="post">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="form-group">
+                <label class="bmd-label-floating">CollegeID</label>
+                <input type="text" class="form-control" disabled value="{{ current_user.id }}">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="bmd-label-floating">Collegename</label>
+                <input type="text" class="form-control" value="{{ current_user.username }}">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Email address</label>
+                <input type="email" class="form-control" value="{{ current_user.email }}">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">First Name</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Last Name</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="bmd-label-floating">Adress</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">City</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Country</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="bmd-label-floating">Postal Code</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>About Me</label>
+                <div class="form-group">
+                  <textarea class="form-control" rows="5"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="text-align: center;" class="container button-container">
+            <a style="color: #fff;font-size: 1.5rem;" class="btn btn-primary">
+              SUBMIT
+            </a>
+          </div>
+
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div style="padding: 50px;width: 80%;margin-left: 20px;" class="card card-profile">
+      <div class="card-avatar">
+      </div>
+      <div class="card-body">
+        <h1 class="card-category text-gray">
+          {{ current_user.username }}
+        </h1>
+        <h4 class="card-title">
+          {{ current_user.email }}
+        </h4>
+        <p class="card-description">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam, doloremque.
+        </p>
+        <a style="font-size: 1.5rem;" href="#" class="btn btn-primary">Follow</a>
+      </div>
+      <iframe
+      allow="microphone;"
+      width="350"
+      height="430"
+      src="https://console.dialogflow.com/api-client/demo/embedded/4d421f08-1dd5-4e4a-a239-49a6e41d8814">
+  </iframe>
+    </div>
+
+
+  </div>
+</div>
+
+{% endblock %}
+{% block profile %}
+<link rel="stylesheet" type="text/css"
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+<!-- CSS Files -->
+<link href="../static/static2/assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+<!-- CSS Just for demo purpose, don't include it in your project -->
+<link href="../static/static2/assets/demo/demo.css" rel="stylesheet" />
+
+{% endblock profile %}
+
+{% block javascripts %}
+<script src="../static/static2/assets/js/core/jquery.min.js"></script>
+<script src="../static/static2/assets/js/core/popper.min.js"></script>
+<script src="../static/static2/assets/js/core/bootstrap-material-design.min.js"></script>
+<script src="../static/static2/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+<script src="../static/static2/assets/js/plugins/jquery.validate.min.js"></script>
+
+{% endblock javascripts %}

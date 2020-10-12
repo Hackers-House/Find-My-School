@@ -40,10 +40,6 @@ def apply():
     return render_template('products.html', blog=True)
 
 
-
-
-
-
 @appp.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -70,6 +66,8 @@ def logout():
 
 @appp.route("/skl")
 def skl():
+    from .services.map import main
+    main()
     return render_template('Skl.html')
 
 
@@ -94,5 +92,5 @@ def user(username):
     form = EditProfileForm()
     user = User.query.filter_by(username=username).first_or_404()
     if username[-3:] == 'edu':
-        return render_template('school.html, user=user')
+        return render_template('schooldash.html, user=user')
     return render_template('user.html', user=user, form=form)
