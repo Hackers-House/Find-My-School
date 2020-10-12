@@ -1,6 +1,7 @@
 from googleplaces import GooglePlaces, types
 import folium
 import requests
+import os
 
 
 def GetUserGeoLocation():
@@ -18,7 +19,7 @@ def GetUserGeoLocation():
 
 
 def GetHospitalLocation(userlatlong):
-    Codes = "AIzaSyDzkSEYB2JPmSHBCFgog3QjgSZZpRvwMcs"
+    Codes = os.getenv("G_API")
     google_places = GooglePlaces(Codes)
     query_result = google_places.nearby_search(
             lat_lng={'lat': userlatlong[0],
